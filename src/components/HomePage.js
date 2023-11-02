@@ -3,12 +3,19 @@ import { AppBar, Toolbar, Button, TextField, Grid, Typography, Container, CssBas
 
 const useStyles = makeStyles((theme) => ({
   whiteAppBar: {
-    background: 'white', // Set the background color to white
+    background: 'white', // Set the background color of the AppBars to white
     boxShadow: 'none', // Remove box shadow
     marginTop: 0, // Remove top margin
   },
+  headerNavBar: {
+    borderTop: '1px solid #e7e7e7', // Add top border
+    borderBottom: '1px solid #e7e7e7', // Add bottom border
+  },
   heroSection: {
     padding: theme.spacing(6, 0), // Adjust padding to remove space above AppBar
+  },
+  whiteBackground: {
+    background: 'white', // Set the entire page's background to white
   },
 }));
 
@@ -39,19 +46,21 @@ const HeaderNavBar = () => {
   ];
 
   return (
-    <AppBar position="static" className={classes.whiteAppBar}>
-      <Toolbar>
-        <Grid container justify="center">
-          {brandLogos.map((logo) => (
-            <Grid item key={logo}>
-              <Button>
-                <img src={logo} alt="Brand logo" style={{ maxWidth: '100%' }} />
-              </Button>
-            </Grid>
-          ))}
-        </Grid>
-      </Toolbar>
-    </AppBar>
+    <div className={classes.headerNavBar}>
+      <AppBar position="static" className={classes.whiteAppBar}>
+        <Toolbar>
+          <Grid container justify="center">
+            {brandLogos.map((logo) => (
+              <Grid item key={logo}>
+                <Button>
+                  <img src={logo} alt="Brand logo" style={{ maxWidth: '100%' }} />
+                </Button>
+              </Grid>
+            ))}
+          </Grid>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
 
@@ -64,7 +73,7 @@ const Hero = () => {
   };
 
   return (
-    <section className={classes.heroSection}>
+    <section className={`${classes.heroSection} ${classes.whiteBackground}`}>
       <Container maxWidth="lg">
         <Typography variant="h4" align="center" gutterBottom>
           Find Help with Your Car Issues
@@ -89,8 +98,10 @@ const Hero = () => {
 };
 
 const App = () => {
+  const classes = useStyles();
+
   return (
-    <div>
+    <div className={classes.whiteBackground}>
       <CssBaseline />
       <InnerHeader />
       <HeaderNavBar />
