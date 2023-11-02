@@ -3,20 +3,30 @@ import { AppBar, Toolbar, Button, TextField, Grid, Typography, Container, CssBas
 
 const useStyles = makeStyles((theme) => ({
   whiteAppBar: {
-    background: 'white', // Set the background color of the AppBars to white
-    padding: 0, // Remove padding at the top of the AppBar
-    boxShadow: 'none', // Remove box shadow
-    marginTop: 0, // Remove top margin
+    background: 'white',
+    padding: 0,
+    boxShadow: 'none',
+    marginTop: 0,
   },
   headerNavBar: {
-    borderTop: '1px solid #e7e7e7', // Add top border
-    borderBottom: '1px solid #e7e7e7', // Add bottom border
+    borderTop: '1px solid #e7e7e7',
+    borderBottom: '1px solid #e7e7e7',
   },
   heroSection: {
-    padding: theme.spacing(6, 0), // Adjust padding to remove space above AppBar
+    padding: theme.spacing(6, 0),
+    textAlign: 'center',
   },
   whiteBackground: {
-    background: 'white', // Set the entire page's background to white
+    background: 'white',
+  },
+  smallTextField: {
+    width: '200px',
+    border: '2px solid black',
+    borderRadius: '5px',
+    background: 'grey',
+  },
+  submitButton: {
+    marginTop: '20px',
   },
 }));
 
@@ -65,38 +75,63 @@ const HeaderNavBar = () => {
   );
 };
 
-const Hero = () => {
-  const [vehicleRegistrationNumber, setVehicleRegistrationNumber] = React.useState('');
-  const classes = useStyles();
-
-  const handleChange = (event) => {
-    setVehicleRegistrationNumber(event.target.value);
-  };
-
-  return (
-    <section className={`${classes.heroSection} ${classes.whiteBackground}`}>
-      <Container maxWidth="lg">
-        <Typography variant="h4" align="center" gutterBottom>
-          Find Help with Your Car Issues
-        </Typography>
-        <Typography variant="body1" align="center" paragraph>
-          Enter your vehicle registration number to get started
-        </Typography>
-        <TextField
-          id="vehicleRegistrationNumber"
-          name="vehicleRegistrationNumber"
-          label="Vehicle registration number"
-          value={vehicleRegistrationNumber}
-          onChange={handleChange}
-          style={{ width: '100%', marginBottom: '20px' }}
-        />
-        <Button variant="contained" color="primary" fullWidth>
-          Submit
-        </Button>
-      </Container>
-    </section>
-  );
-};
+    const Hero = () => {
+        const [vehicleRegistrationNumber, setVehicleRegistrationNumber] = React.useState('');
+        const classes = useStyles();
+      
+        const handleChange = (event) => {
+          setVehicleRegistrationNumber(event.target.value);
+        };
+      
+        return (
+          <section className={`${classes.heroSection} ${classes.whiteBackground}`}>
+            <Container maxWidth="lg">
+              <Typography variant="h4" gutterBottom>
+                Find Help with Your Car Issues
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Enter your vehicle registration number to get started
+              </Typography>
+              <Grid container alignItems="center" justify="center" spacing={2}>
+                <Grid item xs={12} sm={6}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <TextField
+                      id="filled-basic"
+                      name="vehicleRegistrationNumber"
+                      label="Enter reg"
+                      placeholder="Enter reg"
+                      value={vehicleRegistrationNumber}
+                      onChange={handleChange}
+                      variant="filled"
+                      fullWidth
+                      style={{
+                        marginBottom: '10px',
+                        border: '2px solid black',
+                        borderRadius: '5px',
+                        width: '50%',
+                      }}
+                    />
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      fullWidth
+                      style={{
+                        border: '2px solid black',
+                        borderRadius: '5px',
+                        background: '#0460cc', // Set the background color to #0460cc
+                        width: '50%',
+                      }}
+                    >
+                      SEARCH
+                    </Button>
+                  </div>
+                </Grid>
+              </Grid>
+            </Container>
+          </section>
+        );
+      };
+  
 
 const App = () => {
   const classes = useStyles();
