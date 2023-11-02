@@ -4,6 +4,7 @@ import { AppBar, Toolbar, Button, TextField, Grid, Typography, Container, CssBas
 const useStyles = makeStyles((theme) => ({
   whiteAppBar: {
     background: 'white', // Set the background color of the AppBars to white
+    padding: 0, // Remove padding at the top of the AppBar
     boxShadow: 'none', // Remove box shadow
     marginTop: 0, // Remove top margin
   },
