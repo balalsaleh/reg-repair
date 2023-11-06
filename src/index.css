@@ -76,19 +76,25 @@ code {
 }
 
 
+/* Add a slight grey background to the regInput */
 .regInput {
   font-size: 18px; /* Adjust the font size as needed */
   padding: 10px; /* Adjust padding as needed */
-  border: 2px solid #000; /* Black border */
-  width: 100%; /* Expand to fill width */
-  height: 40px; /* Adjust the height as needed */
+  border: 2px solid #00000096; /* Black border */
+  background-color: #f0f0f0; /* Grey background color */
+  width: 34%; /* Expand to fill width */
+  height: 50px; /* Adjust the height as needed */
   text-align: center; /* Center text horizontally */
   line-height: 40px; /* Center text vertically */
   font-weight: bold; /* Make text bold */
   text-transform: uppercase; /* Convert text to uppercase */
+  border-radius: 10px; /* Add slight curves to corner borders */
 }
+
+
 
 
 .regInput::placeholder {
   text-align: center;
+  font-size: 24px;
 }

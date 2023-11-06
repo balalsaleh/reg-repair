@@ -85,7 +85,7 @@ const HomePage = () => {
         {/* Centered Banner with <h1> and <p> */}
       <div className="banner">
         <div className="banner-content">
-          <h1>Enter your reg</h1>
+          <h1>Enter your Reg to find your Auto Repair</h1>
           <p>Some additional text goes here.</p>
           <input type="text" className="regInput" placeholder="ENTER REG" />
         </div>
