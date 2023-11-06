@@ -66,13 +66,23 @@ const HomePage = () => {
     setCurrent(e.key);
   };
   
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
-    {items.map(item => (
-      <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
-        {item.label}
-      </Menu.Item>
-    ))}
-  </Menu>;
+  return (
+    <div>
+      {/* Inner Header with Logo */}
+      <div className="inner-header">
+        <img src="/your-logo.png" alt="Logo" />
+      </div>
+      
+      {/* Navigation Bar */}
+      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
+        {items.map(item => (
+          <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
+            {item.label}
+          </Menu.Item>
+        ))}
+      </Menu>
+    </div>
+  );
 };
 
 export default HomePage;
