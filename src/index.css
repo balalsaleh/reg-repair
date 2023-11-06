@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-menu-horizontal .ant-menu-item {
+  height: 80px; /* Change the value as needed */
+}
+
+/* Adjust the Menu Items' size */
+.ant-menu-horizontal .ant-menu-item {
+  font-size: 20px; /* Change the font size as needed */
+  padding: 16px 24px; /* Adjust the padding as needed */
+}

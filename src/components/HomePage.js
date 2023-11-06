@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
+import '../index.css';
 
 const items = [
   {
@@ -12,7 +13,6 @@ const items = [
     label: 'Navigation Two',
     key: 'app',
     icon: <AppstoreOutlined />,
-    disabled: true,
   },
   {
     label: 'Navigation Three - Submenu',
