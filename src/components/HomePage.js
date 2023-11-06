@@ -60,27 +60,36 @@ const items = [
 ];
 
 const HomePage = () => {
-  const [current, setCurrent] = useState('mail');
-  const onClick = (e) => {
-    console.log('click ', e);
-    setCurrent(e.key);
-  };
+    const [current, setCurrent] = useState('mail');
+    const onClick = (e) => {
+      console.log('click ', e);
+      setCurrent(e.key);
+    };
   
-  return (
-    <div>
-      {/* Inner Header with Logo */}
-      <div className="inner-header">
-        <img src="/your-logo.png" alt="Logo" />
+    return (
+      <div>
+        {/* Inner Header with Logo */}
+        <div className="inner-header">
+          <img src="/your-logo.png" alt="Logo" />
+        </div>
+  
+        {/* Navigation Bar */}
+        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
+          {items.map(item => (
+            <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
+              {item.label}
+            </Menu.Item>
+          ))}
+        </Menu>
+  
+        {/* Centered Banner with <h1> and <p> */}
+      <div className="banner">
+        <div className="banner-content">
+          <h1>Enter your reg</h1>
+          <p>Some additional text goes here.</p>
+          <input type="text" className="regInput" placeholder="Your Registration" />
+        </div>
       </div>
-      
-      {/* Navigation Bar */}
-      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
-        {items.map(item => (
-          <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
-            {item.label}
-          </Menu.Item>
-        ))}
-      </Menu>
     </div>
   );
 };

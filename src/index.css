@@ -12,11 +12,13 @@ code {
     monospace;
 }
 
+/* HEADER & NAV BAR */
+
 .ant-menu-horizontal .ant-menu-item {
   height: 80px; /* Change the value as needed */
 
 }
-/* Adjust the Menu Items' size */
+
 .ant-menu-horizontal .ant-menu-item {
   font-size: 20px; /* Change the font size as needed */
   padding: 16px 24px; /* Adjust the padding as needed */
@@ -28,7 +30,7 @@ code {
   justify-content: center;
 }
 
-/* Optional: Adjust the spacing between menu items */
+
 .ant-menu-horizontal .ant-menu-item {
   margin: 0 10px; /* You can adjust the margin as needed */
 }
@@ -46,8 +48,36 @@ code {
   border-bottom: 0.5px solid #e7e7e9; /* Add a bottom border */
 }
 
-/* Style the logo */
+
 .inner-header img {
-  margin-right: 10px; /* Add some space to the right of the logo */
+  margin-right: 10px; /* Add some space to the right of the logo */ /* Style the logo */
 }
 
+/* BANNER */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust the height as needed */
+}
+
+
+.banner-content {  /* Style the banner content */
+  text-align: center; 
+}
+
+
+.banner-content h1 { /* Style the <h1> and <p> inside the banner */
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Add spacing between <h1> and <p> */
+}
+
+.banner-content p {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #333; /* Text color for the <p> element */
+}
+
+
+.regInput { /*  Style the input */
+  /* Add your styles for the input element here */
+}
