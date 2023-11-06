@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, SearchOutlined, SettingOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import '../index.css';
 
 const items = [
   {
-    label: 'Navigation One',
-    key: 'mail',
-    icon: <MailOutlined />,
+    label: 'Search',
+    key: 'search',
+    icon: <SearchOutlined />,
   },
   {
     label: 'Navigation Two',
@@ -87,7 +87,7 @@ const HomePage = () => {
         <div className="banner-content">
           <h1>Enter your reg</h1>
           <p>Some additional text goes here.</p>
-          <input type="text" className="regInput" placeholder="Your Registration" />
+          <input type="text" className="regInput" placeholder="ENTER REG" />
         </div>
       </div>
     </div>

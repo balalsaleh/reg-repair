@@ -1,15 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 /* HEADER & NAV BAR */
@@ -68,7 +66,7 @@ code {
 
 
 .banner-content h1 { /* Style the <h1> and <p> inside the banner */
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 45px; /* Adjust the font size as needed */
   margin-bottom: 10px; /* Add spacing between <h1> and <p> */
 }
 
@@ -78,6 +76,19 @@ code {
 }
 
 
-.regInput { /*  Style the input */
-  /* Add your styles for the input element here */
+.regInput {
+  font-size: 18px; /* Adjust the font size as needed */
+  padding: 10px; /* Adjust padding as needed */
+  border: 2px solid #000; /* Black border */
+  width: 100%; /* Expand to fill width */
+  height: 40px; /* Adjust the height as needed */
+  text-align: center; /* Center text horizontally */
+  line-height: 40px; /* Center text vertically */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+
+.regInput::placeholder {
+  text-align: center;
 }
