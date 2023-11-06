@@ -75,8 +75,6 @@ code {
   color: #333; /* Text color for the <p> element */
 }
 
-
-/* Add a slight grey background to the regInput */
 .regInput {
   font-size: 18px; /* Adjust the font size as needed */
   padding: 10px; /* Adjust padding as needed */
@@ -91,10 +89,17 @@ code {
   border-radius: 10px; /* Add slight curves to corner borders */
 }
 
-
-
-
 .regInput::placeholder {
   text-align: center;
-  font-size: 24px;
+  font-size: 27px;
+}
+
+/* Center the Search button */
+.searchButton-container {
+  text-align: center; /* Center text horizontally */
+}
+
+/* Adjust the button's width as needed */
+.searchButton-container .ant-btn {
+  width: 100px; /* Adjust the width as needed */
 }
