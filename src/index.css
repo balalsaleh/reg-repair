@@ -103,3 +103,43 @@ code {
 .searchButton-container .ant-btn {
   width: 100px; /* Adjust the width as needed */
 }
+
+/* ------- MEDIA QUERIES ------- */
+
+
+/* Define breakpoints for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust the font size for smaller screens */
+  .regInput {
+    font-size: 16px;
+  }
+
+  /* Center text vertically within the button container */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Adjust the inner header and navigation bar for smaller screens */
+@media screen and (max-width: 768px) {
+  .inner-header {
+    height: 60px; /* Adjust the inner header height for mobile */
+  }
+
+  .ant-menu-horizontal .ant-menu-item {
+    height: 60px; /* Adjust the menu item height for mobile */
+    font-size: 16px; /* Adjust the font size for mobile */
+    padding: 10px 16px; /* Adjust the padding for mobile */
+  }
+}
+
+/* Adjust the banner content for smaller screens */
+@media screen and (max-width: 768px) {
+  .banner-content {
+    padding: 20px; /* Adjust the padding for mobile */
+  }
+}
+
+/* Additional mobile-responsive styles can be added here */
