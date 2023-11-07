@@ -1,13 +1,145 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Poppins', sans-serif;
+
 }
+
+/* HEADER & NAV BAR */
+
+.ant-menu-horizontal .ant-menu-item {
+  height: 80px; /* Change the value as needed */
+
+}
+
+.ant-menu-horizontal .ant-menu-item {
+  font-size: 20px; /* Change the font size as needed */
+  padding: 16px 24px; /* Adjust the padding as needed */
+
+}
+
+.ant-menu-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+
+.ant-menu-horizontal .ant-menu-item {
+  margin: 0 10px; /* You can adjust the margin as needed */
+}
+
+
+
+.inner-header {
+  height: 100px; /* Adjust the height as needed */
+  background-color: #ffffff; /* Background color for the inner header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread the contents to both ends */
+  padding: 0 20px; /* Add padding to create some space around the logo */
+  color: #fff; /* Text color */
+  border-bottom: 0.5px solid #e7e7e9; /* Add a bottom border */
+}
+
+
+.inner-header img {
+  margin-right: 10px; /* Add some space to the right of the logo */ /* Style the logo */
+}
+
+/* BANNER */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust the height as needed */
+}
+
+
+.banner-content {  /* Style the banner content */
+  text-align: center; 
+}
+
+
+.banner-content h1 { /* Style the <h1> and <p> inside the banner */
+  font-size: 45px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Add spacing between <h1> and <p> */
+}
+
+.banner-content p {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #333; /* Text color for the <p> element */
+}
+
+.regInput {
+  font-size: 18px; /* Adjust the font size as needed */
+  padding: 10px; /* Adjust padding as needed */
+  border: 2px solid #00000096; /* Black border */
+  background-color: #f0f0f0; /* Grey background color */
+  width: 34%; /* Expand to fill width */
+  height: 50px; /* Adjust the height as needed */
+  text-align: center; /* Center text horizontally */
+  line-height: 40px; /* Center text vertically */
+  font-weight: bold; /* Make text bold */
+  text-transform: uppercase; /* Convert text to uppercase */
+  border-radius: 10px; /* Add slight curves to corner borders */
+}
+
+.regInput::placeholder {
+  text-align: center;
+  font-size: 27px;
+}
+
+/* Center the Search button */
+.searchButton-container {
+  text-align: center; /* Center text horizontally */
+}
+
+/* Adjust the button's width as needed */
+.searchButton-container .ant-btn {
+  width: 100px; /* Adjust the width as needed */
+}
+
+/* ------- MEDIA QUERIES ------- */
+
+
+/* Define breakpoints for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust the font size for smaller screens */
+  .regInput {
+    font-size: 16px;
+  }
+
+  /* Center text vertically within the button container */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Adjust the inner header and navigation bar for smaller screens */
+@media screen and (max-width: 768px) {
+  .inner-header {
+    height: 60px; /* Adjust the inner header height for mobile */
+  }
+
+  .ant-menu-horizontal .ant-menu-item {
+    height: 60px; /* Adjust the menu item height for mobile */
+    font-size: 16px; /* Adjust the font size for mobile */
+    padding: 10px 16px; /* Adjust the padding for mobile */
+  }
+}
+
+/* Adjust the banner content for smaller screens */
+@media screen and (max-width: 768px) {
+  .banner-content {
+    padding: 20px; /* Adjust the padding for mobile */
+  }
+}
+
+/* Additional mobile-responsive styles can be added here */
