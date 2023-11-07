@@ -121,7 +121,8 @@ code {
   text-align: center;
   padding: 60px; /* Adjust the padding as needed */
   border: 1px solid #d9d9d9; /* Optional: Add borders to the items */
-  margin: 5px; /* Adjust the margin as needed for spacing between items */
+  margin: 30px; /* Adjust the margin as needed for spacing between items */
+  border-radius: 10px; /* Adjust the radius value as needed for the amount of curvature */
 }
 
 
