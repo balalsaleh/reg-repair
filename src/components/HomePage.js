@@ -77,7 +77,7 @@ function HomePage() {
   };
 
   // here we replace the hastags with our api this is just for now
-  const apiKey = "################################";
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const fetchVehicleInfo = async () => {
     try {
