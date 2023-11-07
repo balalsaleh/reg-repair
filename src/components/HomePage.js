@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import { Menu, Button } from "antd";
 import "../index.css";
+// import variables for logo
 import regRepairImage from "./images/reg-repair.png";
 
 const items = [
@@ -76,7 +77,7 @@ function HomePage() {
   };
 
   // here we replace the hastags with our api this is just for now
-  const apiKey = "KegP95AJ9mVSmOSEwMIN2r77qfOiefq5o5dJ3306";
+  const apiKey = "################################";
 
   const fetchVehicleInfo = async () => {
     try {
