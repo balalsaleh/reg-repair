@@ -147,7 +147,7 @@ function HomePage() {
           <h2>Vehicle Information</h2>
           {/* Here we display the retrieved vehicle data as a formatted JSON 
               we could do with just returning the vehicle information that we need (the make) */}
-          <pre>{JSON.stringify(vehicleData, null, 2)}</pre>
+          <p>You drive a {vehicleData.make}</p>
         </div>
       )}
     </div>
