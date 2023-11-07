@@ -104,6 +104,36 @@ code {
   width: 100px; /* Adjust the width as needed */
 }
 
+ /* Categories */
+
+ .grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-item {
+  text-align: center;
+  padding: 60px; /* Adjust the padding as needed */
+  border: 1px solid #d9d9d9; /* Optional: Add borders to the items */
+  margin: 5px; /* Adjust the margin as needed for spacing between items */
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ------- MEDIA QUERIES ------- */
 
 
