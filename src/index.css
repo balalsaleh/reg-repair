@@ -33,8 +33,6 @@ code {
   margin: 0 10px; /* You can adjust the margin as needed */
 }
 
-
-
 .inner-header {
   height: 100px; /* Adjust the height as needed */
   background-color: #ffffff; /* Background color for the inner header */
@@ -45,7 +43,6 @@ code {
   color: #fff; /* Text color */
   border-bottom: 0.5px solid #e7e7e9; /* Add a bottom border */
 }
-
 
 .inner-header img {
   margin-right: 10px; /* Add some space to the right of the logo */ /* Style the logo */
@@ -59,11 +56,9 @@ code {
   height: 300px; /* Adjust the height as needed */
 }
 
-
 .banner-content {  /* Style the banner content */
   text-align: center; 
 }
-
 
 .banner-content h1 { /* Style the <h1> and <p> inside the banner */
   font-size: 45px; /* Adjust the font size as needed */
@@ -91,12 +86,18 @@ code {
 
 .regInput::placeholder {
   text-align: center;
-  font-size: 27px;
+  font-size: 40px;
 }
 
 /* Center the Search button */
 .searchButton-container {
   text-align: center; /* Center text horizontally */
+}
+
+/* vehicle data */
+.vehicle-container {
+  text-align: center;
+  padding: 30px;
 }
 
 /* Adjust the button's width as needed */

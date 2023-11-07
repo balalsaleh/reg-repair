@@ -143,11 +143,9 @@ function HomePage() {
       </div>
 
       {vehicleData && (
-        <div>
-          <h2>Vehicle Information</h2>
-          {/* Here we display the retrieved vehicle data as a formatted JSON 
-              we could do with just returning the vehicle information that we need (the make) */}
-          <p>You drive a {vehicleData.make}</p>
+        <div className="vehicle-container">
+          <h2>You drive a {vehicleData.make}.</h2>
+          <p>Pick your repair below:</p>
         </div>
       )}
     </div>
