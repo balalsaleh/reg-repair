@@ -10,6 +10,9 @@ import "../index.css";
 // import variables for logo
 import regRepairImage from "./images/reg-repair.png";
 
+import Categories from "./Categories"; // Import the Categories component
+
+
 const items = [
   {
     label: "Search",
@@ -67,91 +70,91 @@ const items = [
 ];
 
 function HomePage() {
-  const [current, setCurrent] = useState("mail");
-  const [registrationNumber, setRegistrationNumber] = useState("");
-  const [vehicleData, setVehicleData] = useState(null);
-
-  const onClick = (e) => {
-    console.log("click ", e);
-    setCurrent(e.key);
-  };
-
-  // here we replace the hastags with our api this is just for now
-  const apiKey = "################################";
-
-  const fetchVehicleInfo = async () => {
-    try {
-      /* We send a POST request to the '/vehicle-enquiry/v1/vehicles' endpoint 
-         and use the proxy from package.json file with the registrationNumber 
-         as the request payload and the API key as a header and this takes in 
-         the registration number as the parameter */
-      const response = await axios.post(
-        "/vehicle-enquiry/v1/vehicles",
-        {
-          registrationNumber,
-        },
-        {
-          headers: {
-            "x-api-key": apiKey,
+    const [current, setCurrent] = useState("mail");
+    const [registrationNumber, setRegistrationNumber] = useState("");
+    const [vehicleData, setVehicleData] = useState(null);
+    const [showCategories, setShowCategories] = useState(false); // State to control Categories component visibility
+  
+    const onClick = (e) => {
+      console.log("click ", e);
+      setCurrent(e.key);
+    };
+  
+    const apiKey = "KegP95AJ9mVSmOSEwMIN2r77qfOiefq5o5dJ3306";
+  
+    const fetchVehicleInfo = async () => {
+      try {
+        const response = await axios.post(
+          "/vehicle-enquiry/v1/vehicles",
+          {
+            registrationNumber,
           },
-        }
-      );
-      // We set the retrieved vehicle data in the state
-      setVehicleData(response.data);
-    } catch (error) {
-      // We try and handle errors, and log them to the console
-      console.error("We have an Error fetching the data:", error);
-    }
-  };
-
-  return (
-    <div>
-      <div className="inner-header">
-        <img src={regRepairImage} alt="Logo" />
-      </div>
-
-      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
-        {items.map((item) => (
-          <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
-            {item.label}
-          </Menu.Item>
-        ))}
-      </Menu>
-
-      <div className="banner">
-        <div className="banner-content">
-          <h1>Enter your Reg to find your Auto Repair</h1>
-          <p>Some additional text goes here.</p>
-          <input
-            type="text"
-            className="regInput"
-            placeholder="ENTER REG"
-            value={registrationNumber}
-            onChange={(e) => setRegistrationNumber(e.target.value)}
-          />
+          {
+            headers: {
+              "x-api-key": apiKey,
+            },
+          }
+        );
+        setVehicleData(response.data);
+        setShowCategories(true); // Set the state to show Categories component
+      } catch (error) {
+        console.error("We have an Error fetching the data:", error);
+      }
+    };
+  
+    return (
+      <div>
+        <div className="inner-header">
+          <img src={regRepairImage} alt="Logo" />
         </div>
-      </div>
-
-      <div className="searchButton-container">
-        <Button
-          type="primary"
-          icon={<SearchOutlined />}
-          onClick={fetchVehicleInfo}
-        >
-          Search
-        </Button>
-      </div>
-
-      {vehicleData && (
-        <div>
-          <h2>Vehicle Information</h2>
-          {/* Here we display the retrieved vehicle data as a formatted JSON 
-              we could do with just returning the vehicle information that we need (the make) */}
-          <pre>{JSON.stringify(vehicleData, null, 2)}</pre>
+  
+        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
+          {items.map((item) => (
+            <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
+              {item.label}
+            </Menu.Item>
+          ))}
+        </Menu>
+  
+        <div className="banner">
+          <div className="banner-content">
+            <h1>Enter your Reg to find your Auto Repair</h1>
+            <p>Some additional text goes here.</p>
+            <input
+              type="text"
+              className="regInput"
+              placeholder="ENTER REG"
+              value={registrationNumber}
+              onChange={(e) => setRegistrationNumber(e.target.value)}
+            />
+          </div>
         </div>
-      )}
-    </div>
-  );
-}
+  
+        <div className="searchButton-container">
+          <Button
+            type="primary"
+            icon={<SearchOutlined />}
+            onClick={fetchVehicleInfo}
+          >
+            Search
+          </Button>
+        </div>
+  
+        {vehicleData && (
+          <div className="vehicle-info">
+            <h2>Vehicle Information</h2>
+            <pre>{JSON.stringify(vehicleData, null, 2)}</pre>
+          </div>
+        )}
+  
+        {showCategories && (
+          <div className="categories-container">
+            <Categories />
+          </div>
+        )}
+      </div>
+    );
+  }
 
+  
 export default HomePage;
