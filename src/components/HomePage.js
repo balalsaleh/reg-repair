@@ -8,7 +8,7 @@ import {
 import { Menu, Button } from "antd";
 import "../index.css";
 // import variables for logo
-import regRepairImage from "./images/reg-repair.png";
+import regRepairImage from "./images/icons8-repair-64.png";
 
 import Categories from "./Categories"; // Import the Categories component
 
@@ -103,9 +103,13 @@ function HomePage() {
     };
   
     return (
-      <div>
+        <div>
         <div className="inner-header">
-          <img src={regRepairImage} alt="Logo" />
+          <img
+            src={regRepairImage}
+            alt="Logo"
+            style={{ width: "", marginLeft: "20px" }}
+          />
         </div>
   
         <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
