@@ -124,15 +124,36 @@ code {
   justify-content: center;
 }
 
-.grid-item {
+.RepairOption {
   text-align: center;
   padding: 60px; /* Adjust the padding as needed */
   border: 1px solid #d9d9d9; /* Optional: Add borders to the items */
   margin: 30px; /* Adjust the margin as needed for spacing between items */
   border-radius: 10px; /* Adjust the radius value as needed for the amount of curvature */
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+
+  /* Define the default background color */
+  background-color: #ffffff;
+
+  cursor: pointer;
 }
 
+.RepairOption:hover {
+  background-color: #f0f0f0; /* Change to a different color or style as desired */
 
+  cursor: pointer;
+}
+
+ /* ----- Video Frame ------ */
+
+.repair-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
 
 
 
