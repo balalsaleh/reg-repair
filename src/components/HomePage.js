@@ -8,10 +8,10 @@ import {
 import { Menu, Button } from "antd";
 import "../index.css";
 import regRepairImage from "./images/icons8-repair-64.png";
-
-import Categories from "./Categories"; // Import the Categories component
-
-import RepairVideo from "./YTvideo"; // Import the RepairVideo component
+// Import the Categories component
+import Categories from "./Categories";
+// Import the RepairVideo component
+import RepairVideo from "./YTvideo";
 
 // here we define an array of navigation items
 const items = [
@@ -117,7 +117,6 @@ function HomePage() {
         />
       </div>
 
-
       {/* this is for the navigation menu */}
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
         {items.map((item) => (
@@ -166,10 +165,12 @@ function HomePage() {
         </div>
       )}
 
- 
       {selectedOption && (
         <div className="repair-video-container">
-          <RepairVideo repairOption={selectedOption} />
+          <RepairVideo
+            repairOption={selectedOption}
+            vehicleData={vehicleData}
+          />
         </div>
       )}
     </div>
