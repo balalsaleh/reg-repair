@@ -58,7 +58,7 @@ code {
   align-items: center;
   height: 300px; /* Adjust the height as needed */
   position: relative;
-  background: linear-gradient(to bottom, #c6e0ff 30%, #fff 50%);
+  background: linear-gradient(to bottom, #c6e0ff 35%, #fff 70%);
   /* Use the colors you want for #color1 and #color2 */
 }
 
