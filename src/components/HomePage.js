@@ -7,7 +7,6 @@ import {
 } from "@ant-design/icons";
 import { Menu, Button } from "antd";
 import "../index.css";
-// import variables for logo
 import regRepairImage from "./images/reg-repair.png";
 
 const items = [
@@ -70,21 +69,17 @@ function HomePage() {
   const [current, setCurrent] = useState("mail");
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
+  const [showCategories, setShowCategories] = useState(false);
 
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
   };
 
-  // here we replace the hastags with our api this is just for now
   const apiKey = process.env.REACT_APP_API_KEY;
 
   const fetchVehicleInfo = async () => {
     try {
-      /* We send a POST request to the '/vehicle-enquiry/v1/vehicles' endpoint 
-         and use the proxy from package.json file with the registrationNumber 
-         as the request payload and the API key as a header and this takes in 
-         the registration number as the parameter */
       const response = await axios.post(
         "/vehicle-enquiry/v1/vehicles",
         {
@@ -96,10 +91,9 @@ function HomePage() {
           },
         }
       );
-      // We set the retrieved vehicle data in the state
       setVehicleData(response.data);
+      setShowCategories(true);
     } catch (error) {
-      // We try and handle errors, and log them to the console
       console.error("We have an Error fetching the data:", error);
     }
   };
@@ -145,6 +139,12 @@ function HomePage() {
         <div className="vehicle-container">
           <h2>You drive a {vehicleData.make}.</h2>
           <p>Pick your repair from the options below:</p>
+        </div>
+      )}
+
+      {showCategories && (
+        <div className="categories-container">
+          <Categories />
         </div>
       )}
     </div>
