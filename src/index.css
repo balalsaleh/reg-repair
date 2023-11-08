@@ -57,6 +57,9 @@ code {
   justify-content: center;
   align-items: center;
   height: 300px; /* Adjust the height as needed */
+  position: relative;
+  background: linear-gradient(to bottom, #c6e0ff 30%, #fff 50%);
+  /* Use the colors you want for #color1 and #color2 */
 }
 
 
@@ -97,11 +100,13 @@ code {
 /* Center the Search button */
 .searchButton-container {
   text-align: center; /* Center text horizontally */
+  border-bottom: 0.5px solid #e7e7e9;
 }
 
 /* Adjust the button's width as needed */
 .searchButton-container .ant-btn {
   width: 100px; /* Adjust the width as needed */
+  margin-bottom: 15px; /* Add space at the bottom of the button */
 }
 
  /* Categories */
@@ -170,6 +175,13 @@ code {
 @media screen and (max-width: 768px) {
   .banner-content {
     padding: 20px; /* Adjust the padding for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .searchButton-container {
+    position: static; /* Reset positioning for smaller screens */
+    margin-top: 40px; /* Add margin to create spacing */
   }
 }
 

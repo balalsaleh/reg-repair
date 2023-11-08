@@ -121,17 +121,18 @@ function HomePage() {
         </Menu>
   
         <div className="banner">
-          <div className="banner-content">
-            <h1>Enter your Reg to find your Auto Repair</h1>
-            <p>Some additional text goes here.</p>
-            <input
-              type="text"
-              className="regInput"
-              placeholder="ENTER REG"
-              value={registrationNumber}
-              onChange={(e) => setRegistrationNumber(e.target.value)}
-            />
-          </div>
+            <div className="banner-content">
+                <h1>Enter your Reg to find your Auto Repair</h1>
+                <p>Some additional text goes here.</p>
+                    <input
+                    type="text"
+                    className="regInput"
+                    placeholder="ENTER REG"
+                    value={registrationNumber}
+                    onChange={(e) => setRegistrationNumber(e.target.value)}
+                    />
+            </div>
+                    <div className="background-half"></div>
         </div>
   
         <div className="searchButton-container">
