@@ -123,7 +123,7 @@ function HomePage() {
         <div className="banner">
             <div className="banner-content">
                 <h1>Enter your Reg to find your Auto Repair</h1>
-                <p>Some additional text goes here.</p>
+                <p>Repair your car yourself and save yourself a visit to the garage.</p>
                     <input
                     type="text"
                     className="regInput"
