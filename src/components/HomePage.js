@@ -88,7 +88,7 @@ function HomePage() {
   const fetchVehicleInfo = async () => {
     try {
       const response = await axios.post(
-        "/vehicle-enquiry/v1/vehicles",
+        process.env.REACT_APP_DVLA_WEB,
         {
           registrationNumber,
         },
