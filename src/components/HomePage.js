@@ -1,3 +1,4 @@
+// import everything we need
 import React, { useState } from "react";
 import axios from "axios";
 import {
@@ -7,11 +8,11 @@ import {
 } from "@ant-design/icons";
 import { Menu, Button } from "antd";
 import "../index.css";
-// import variables for logo
 import regRepairImage from "./images/icons8-repair-64.png";
 
 import Categories from "./Categories"; // Import the Categories component
 
+// here we define an array of navigation items
 const items = [
   {
     label: "Search",
@@ -72,16 +73,18 @@ function HomePage() {
   const [current, setCurrent] = useState("mail");
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
-  const [showCategories, setShowCategories] = useState(false); // State to control Categories component visibility
+  const [showCategories, setShowCategories] = useState(false);
 
+  // Function to handle menu item clicks
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
   };
 
-  // Updated API key usage
+  // Use an API key from environment variables
   const apiKey = process.env.REACT_APP_API_KEY;
 
+  // this function is linked to a button to fetch vehicle information from the DVLA API
   const fetchVehicleInfo = async () => {
     try {
       const response = await axios.post(
@@ -96,7 +99,7 @@ function HomePage() {
         }
       );
       setVehicleData(response.data);
-      setShowCategories(true); // Set the state to show Categories component
+      setShowCategories(true);
     } catch (error) {
       console.error("We have an Error fetching the data:", error);
     }
@@ -112,6 +115,7 @@ function HomePage() {
         />
       </div>
 
+      {/* this is for the navigation menu */}
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
         {items.map((item) => (
           <Menu.Item key={item.key} icon={item.icon} disabled={item.disabled}>
@@ -119,7 +123,7 @@ function HomePage() {
           </Menu.Item>
         ))}
       </Menu>
-
+      {/* this is for the banner */}
       <div className="banner">
         <div className="banner-content">
           <h1>Enter your Reg, find your Repair!</h1>
@@ -135,6 +139,7 @@ function HomePage() {
       </div>
 
       <div className="searchButton-container">
+        {/* this is the button to trigger fetching vehicle information */}
         <Button
           type="primary"
           icon={<SearchOutlined />}
@@ -144,6 +149,7 @@ function HomePage() {
         </Button>
       </div>
 
+      {/* this is where we display vehicle information that we actually need the vehicle make */}
       {vehicleData && (
         <div className="vehicle-container">
           <h2>You drive a {vehicleData.make}.</h2>
@@ -151,6 +157,7 @@ function HomePage() {
         </div>
       )}
 
+      {/* here we render the Categories component when showCategories is true */}
       {showCategories && (
         <div className="categories-container">
           <Categories />
