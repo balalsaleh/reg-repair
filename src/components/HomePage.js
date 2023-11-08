@@ -74,6 +74,8 @@ function HomePage() {
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
   const [showCategories, setShowCategories] = useState(false);
+  const REACT_APP_DVLA_WEB =
+    "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles";
 
   // Function to handle menu item clicks
   const onClick = (e) => {
@@ -88,7 +90,7 @@ function HomePage() {
   const fetchVehicleInfo = async () => {
     try {
       const response = await axios.post(
-        process.env.REACT_APP_DVLA_WEB,
+        REACT_APP_DVLA_WEB,
         {
           registrationNumber,
         },
