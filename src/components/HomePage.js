@@ -121,7 +121,6 @@ function HomePage() {
       <div className="banner">
         <div className="banner-content">
           <h1>Enter your Reg to find your Auto Repair</h1>
-          <p>Some additional text goes here.</p>
           <input
             type="text"
             className="regInput"
@@ -145,7 +144,7 @@ function HomePage() {
       {vehicleData && (
         <div className="vehicle-container">
           <h2>You drive a {vehicleData.make}.</h2>
-          <p>Pick your repair below:</p>
+          <p>Pick your repair from the options below:</p>
         </div>
       )}
     </div>
