@@ -10,7 +10,7 @@ code {
 
 }
 
-/* HEADER & NAV BAR */
+/* --------  HEADER & NAV BAR ------- */
 
 .ant-menu-horizontal .ant-menu-item {
   height: 80px; /* Change the value as needed */
@@ -33,8 +33,6 @@ code {
   margin: 0 10px; /* You can adjust the margin as needed */
 }
 
-
-
 .inner-header {
   height: 100px; /* Adjust the height as needed */
   background-color: #ffffff; /* Background color for the inner header */
@@ -46,24 +44,25 @@ code {
   border-bottom: 0.5px solid #e7e7e9; /* Add a bottom border */
 }
 
-
 .inner-header img {
   margin-right: 10px; /* Add some space to the right of the logo */ /* Style the logo */
 }
 
-/* BANNER */
+/* ------- BANNER ------- */
+
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px; /* Adjust the height as needed */
+  position: relative;
+  background: linear-gradient(to bottom, #c6e0ff 35%, #fff 70%);
+  /* Use the colors you want for #color1 and #color2 */  
 }
-
 
 .banner-content {  /* Style the banner content */
   text-align: center; 
 }
-
 
 .banner-content h1 { /* Style the <h1> and <p> inside the banner */
   font-size: 45px; /* Adjust the font size as needed */
@@ -91,18 +90,58 @@ code {
 
 .regInput::placeholder {
   text-align: center;
-  font-size: 27px;
+  font-size: 40px;
 }
 
-/* Center the Search button */
+
 .searchButton-container {
   text-align: center; /* Center text horizontally */
+  border-bottom: 0.5px solid #e7e7e9;
+}
+
+/* vehicle data */
+.vehicle-container {
+  text-align: center;
+  padding: 30px;
 }
 
 /* Adjust the button's width as needed */
+
 .searchButton-container .ant-btn {
   width: 100px; /* Adjust the width as needed */
+  margin-bottom: 15px; /* Add space at the bottom of the button */
 }
+
+ /* ----- Categories ------ */
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-item {
+  text-align: center;
+  padding: 60px; /* Adjust the padding as needed */
+  border: 1px solid #d9d9d9; /* Optional: Add borders to the items */
+  margin: 30px; /* Adjust the margin as needed for spacing between items */
+  border-radius: 10px; /* Adjust the radius value as needed for the amount of curvature */
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ------- MEDIA QUERIES ------- */
 
@@ -139,6 +178,14 @@ code {
 @media screen and (max-width: 768px) {
   .banner-content {
     padding: 20px; /* Adjust the padding for mobile */
+    margin-top:40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchButton-container {
+    position: static; /* Reset positioning for smaller screens */
+    margin-top: 80px; /* Add margin to create spacing */
   }
 }
 

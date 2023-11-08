@@ -8,7 +8,9 @@ import {
 import { Menu, Button } from "antd";
 import "../index.css";
 // import variables for logo
-import regRepairImage from "./images/reg-repair.png";
+import regRepairImage from "./images/icons8-repair-64.png";
+
+import Categories from "./Categories"; // Import the Categories component
 
 const items = [
   {
@@ -70,21 +72,18 @@ function HomePage() {
   const [current, setCurrent] = useState("mail");
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
+  const [showCategories, setShowCategories] = useState(false); // State to control Categories component visibility
 
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
   };
 
-  // here we replace the hastags with our api this is just for now
-  const apiKey = "################################";
+  // Updated API key usage
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const fetchVehicleInfo = async () => {
     try {
-      /* We send a POST request to the '/vehicle-enquiry/v1/vehicles' endpoint 
-         and use the proxy from package.json file with the registrationNumber 
-         as the request payload and the API key as a header and this takes in 
-         the registration number as the parameter */
       const response = await axios.post(
         "/vehicle-enquiry/v1/vehicles",
         {
@@ -96,10 +95,9 @@ function HomePage() {
           },
         }
       );
-      // We set the retrieved vehicle data in the state
       setVehicleData(response.data);
+      setShowCategories(true); // Set the state to show Categories component
     } catch (error) {
-      // We try and handle errors, and log them to the console
       console.error("We have an Error fetching the data:", error);
     }
   };
@@ -107,7 +105,11 @@ function HomePage() {
   return (
     <div>
       <div className="inner-header">
-        <img src={regRepairImage} alt="Logo" />
+        <img
+          src={regRepairImage}
+          alt="Logo"
+          style={{ width: "", marginLeft: "20px" }}
+        />
       </div>
 
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
@@ -120,8 +122,7 @@ function HomePage() {
 
       <div className="banner">
         <div className="banner-content">
-          <h1>Enter your Reg to find your Auto Repair</h1>
-          <p>Some additional text goes here.</p>
+          <h1>Enter your Reg, find your Repair!</h1>
           <input
             type="text"
             className="regInput"
@@ -130,6 +131,7 @@ function HomePage() {
             onChange={(e) => setRegistrationNumber(e.target.value)}
           />
         </div>
+        <div className="background-half"></div>
       </div>
 
       <div className="searchButton-container">
@@ -143,11 +145,15 @@ function HomePage() {
       </div>
 
       {vehicleData && (
-        <div>
-          <h2>Vehicle Information</h2>
-          {/* Here we display the retrieved vehicle data as a formatted JSON 
-              we could do with just returning the vehicle information that we need (the make) */}
-          <pre>{JSON.stringify(vehicleData, null, 2)}</pre>
+        <div className="vehicle-container">
+          <h2>You drive a {vehicleData.make}.</h2>
+          <p>Pick your repair from the options below:</p>
+        </div>
+      )}
+
+      {showCategories && (
+        <div className="categories-container">
+          <Categories />
         </div>
       )}
     </div>
