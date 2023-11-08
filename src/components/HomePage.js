@@ -7,7 +7,10 @@ import {
 } from "@ant-design/icons";
 import { Menu, Button } from "antd";
 import "../index.css";
-import regRepairImage from "./images/reg-repair.png";
+// import variables for logo
+import regRepairImage from "./images/icons8-repair-64.png";
+
+import Categories from "./Categories"; // Import the Categories component
 
 const items = [
   {
@@ -69,13 +72,14 @@ function HomePage() {
   const [current, setCurrent] = useState("mail");
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
-  const [showCategories, setShowCategories] = useState(false);
+  const [showCategories, setShowCategories] = useState(false); // State to control Categories component visibility
 
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
   };
 
+  // Updated API key usage
   const apiKey = process.env.REACT_APP_API_KEY;
 
   const fetchVehicleInfo = async () => {
@@ -92,7 +96,7 @@ function HomePage() {
         }
       );
       setVehicleData(response.data);
-      setShowCategories(true);
+      setShowCategories(true); // Set the state to show Categories component
     } catch (error) {
       console.error("We have an Error fetching the data:", error);
     }
@@ -101,7 +105,11 @@ function HomePage() {
   return (
     <div>
       <div className="inner-header">
-        <img src={regRepairImage} alt="Logo" />
+        <img
+          src={regRepairImage}
+          alt="Logo"
+          style={{ width: "", marginLeft: "20px" }}
+        />
       </div>
 
       <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal">
@@ -114,7 +122,7 @@ function HomePage() {
 
       <div className="banner">
         <div className="banner-content">
-          <h1>Enter your Reg to find your Auto Repair</h1>
+          <h1>Enter your Reg, find your Repair!</h1>
           <input
             type="text"
             className="regInput"
@@ -123,6 +131,7 @@ function HomePage() {
             onChange={(e) => setRegistrationNumber(e.target.value)}
           />
         </div>
+        <div className="background-half"></div>
       </div>
 
       <div className="searchButton-container">
