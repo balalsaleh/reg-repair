@@ -147,7 +147,7 @@ code {
 /* about us page*/
 .custom-header h1 {
   text-align: center;
-  font-size: 36px; /* Adjust the font size as needed */
+  font-size: 50px; /* Adjust the font size as needed */
   margin-bottom: 20px; /* Add space below the title */
 }
 
@@ -166,6 +166,7 @@ code {
 /* Style the label in Descriptions */
 .Descriptions-label {
   font-weight: bold; /* Make the label bold */
+  font-size: 35px; /* Adjust the font size as needed */
 }
 
 /* Style the content in Descriptions */
@@ -174,13 +175,15 @@ code {
 }
 
 .about-us-text {
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 25px; /* Adjust the font size as needed */
   line-height: 1.6; /* Adjust the line height as needed */
+  padding: 50px; /* Adjust the padding as needed */
 }
 
 .contact-us-text {
-  font-size: 20px; /* Adjust the font size as needed */
+  font-size: 25px; /* Adjust the font size as needed */
   line-height: 1.6; /* Adjust the line height as needed */
+  padding: 50px; /* Adjust the padding as needed */
 }
 
 /* ------- MEDIA QUERIES ------- */
@@ -250,5 +253,17 @@ code {
   .repair-video-container iframe {
     width: 100%; /* Make the iframe width 100% of the container */
     height: auto; /* Allow the height to adjust proportionally */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-text {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .contact-us-text {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    padding: 10px; /* Adjust the padding for smaller screens */
   }
 }
