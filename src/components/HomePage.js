@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {
-  AppstoreOutlined,
   SearchOutlined,
-  SettingOutlined,
+  AppstoreOutlined,
+  ContactsOutlined,
 } from "@ant-design/icons";
 import { Menu, Button } from "antd";
 import "../index.css";
@@ -16,57 +16,19 @@ import RepairVideo from "./YTvideo";
 // here we define an array of navigation items
 const items = [
   {
-    label: "Search",
-    key: "search",
+    label: "Reg-Repair",
+    key: "regRepair",
     icon: <SearchOutlined />,
   },
   {
-    label: "Navigation Two",
-    key: "app",
+    label: "About us",
+    key: "aboutUs",
     icon: <AppstoreOutlined />,
   },
   {
-    label: "Navigation Three - Submenu",
-    key: "SubMenu",
-    icon: <SettingOutlined />,
-    children: [
-      {
-        type: "group",
-        label: "Item 1",
-        children: [
-          {
-            label: "Option 1",
-            key: "setting:1",
-          },
-          {
-            label: "Option 2",
-            key: "setting:2",
-          },
-        ],
-      },
-      {
-        type: "group",
-        label: "Item 2",
-        children: [
-          {
-            label: "Option 3",
-            key: "setting:3",
-          },
-          {
-            label: "Option 4",
-            key: "setting:4",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        Navigation Four - Link
-      </a>
-    ),
-    key: "alipay",
+    label: "Contact us",
+    key: "contactUs",
+    icon: <ContactsOutlined />,
   },
 ];
 
@@ -86,7 +48,9 @@ function HomePage() {
   // Use an API key from environment variables
   const apiKey = process.env.REACT_APP_API_KEY;
 
-  // this function is linked to a button to fetch vehicle information from the DVLA API
+  /* this function is linked to a button to fetch vehicle information 
+  from the DVLA API we use a post to post a registration number to return 
+  some data about the vehicle */
   const fetchVehicleInfo = async () => {
     try {
       const response = await axios.post(
