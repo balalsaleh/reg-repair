@@ -144,7 +144,8 @@ code {
   margin-top: 30px;
 }
 
-/* about us page*/
+/* ----- about & contact us page -----*/
+
 .custom-header h1 {
   text-align: center;
   font-size: 50px; /* Adjust the font size as needed */
@@ -155,6 +156,25 @@ code {
 .content-container.About {
   font-size: 18px; /* Adjust the font size as needed */
   font-family: 'Poppins', sans-serif; /* Use the same font as your Reg-Repair page */
+}
+
+.custom-header {
+  text-align: center; /* To center-align the content horizontally */
+  padding: 150px; /* Add more spacing on the left and right-hand sides */
+}
+
+.our-story-item {
+  text-align: left; /* To align the label text to the left */
+  font-weight: bold; /* Optionally, make the label bold */
+  margin-bottom: 10px; /* Adjust the margin for spacing */
+  font-size: 24px; /* Make the "Our Story" text bigger */
+  color: blue; /* Set the text color to blue */
+}
+
+.about-us-text {
+  text-align: left; /* To align the text to the left */
+  margin-top: 10px; /* Adjust the margin for spacing */
+  font-size: large;
 }
 
 /* Adjust the font size and line height of the Descriptions content */
@@ -174,17 +194,16 @@ code {
   color: #333; /* Text color for the content */
 }
 
-.about-us-text {
-  font-size: 25px; /* Adjust the font size as needed */
-  line-height: 1.6; /* Adjust the line height as needed */
-  padding: 50px; /* Adjust the padding as needed */
-}
 
 .contact-us-text {
   font-size: 25px; /* Adjust the font size as needed */
   line-height: 1.6; /* Adjust the line height as needed */
   padding: 50px; /* Adjust the padding as needed */
+  list-style-type: none; /* Remove bullet points */
 }
+
+
+
 
 /* ------- MEDIA QUERIES ------- */
 /* Define breakpoints for mobile responsiveness */
@@ -257,13 +276,14 @@ code {
 }
 
 @media screen and (max-width: 768px) {
-  .about-us-text {
-    font-size: 16px; /* Adjust the font size for smaller screens */
-    padding: 10px; /* Adjust the padding for smaller screens */
-  }
-
   .contact-us-text {
     font-size: 16px; /* Adjust the font size for smaller screens */
     padding: 10px; /* Adjust the padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-header {
+    padding: 20px; /* Reduce the padding for smaller screens */
   }
 }
