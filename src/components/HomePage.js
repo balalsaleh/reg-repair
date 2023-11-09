@@ -1,4 +1,3 @@
-// import everything we need
 import React, { useState } from "react";
 import axios from "axios";
 import {
@@ -9,8 +8,10 @@ import {
 import { Menu, Button } from "antd";
 import "../index.css";
 import regRepairImage from "./images/icons8-repair-64.png";
-
-import Categories from "./Categories"; // Import the Categories component
+// Import the Categories component
+import Categories from "./Categories";
+// Import the RepairVideo component
+import RepairVideo from "./YTvideo";
 
 // here we define an array of navigation items
 const items = [
@@ -70,6 +71,7 @@ const items = [
 ];
 
 function HomePage() {
+  const [selectedOption, setSelectedOption] = useState(null);
   const [current, setCurrent] = useState("mail");
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
@@ -123,7 +125,7 @@ function HomePage() {
           </Menu.Item>
         ))}
       </Menu>
-      {/* this is for the banner */}
+
       <div className="banner">
         <div className="banner-content">
           <h1>Enter your Reg, find your Repair!</h1>
@@ -149,7 +151,7 @@ function HomePage() {
         </Button>
       </div>
 
-      {/* this is where we display vehicle information that we actually need the vehicle make */}
+      {/* This is where we display the car information */}
       {vehicleData && (
         <div className="vehicle-container">
           <h2>You drive a {vehicleData.make}.</h2>
@@ -160,7 +162,17 @@ function HomePage() {
       {/* here we render the Categories component when showCategories is true */}
       {showCategories && (
         <div className="categories-container">
-          <Categories />
+          <Categories onCategorySelect={setSelectedOption} />
+        </div>
+      )}
+
+      {/* This is where we display the video */}
+      {selectedOption && (
+        <div className="repair-video-container">
+          <RepairVideo
+            repairOption={selectedOption}
+            vehicleData={vehicleData}
+          />
         </div>
       )}
     </div>
