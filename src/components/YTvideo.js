@@ -9,12 +9,13 @@ const RepairVideo = ({ repairOption, vehicleData }) => {
     // Function to fetch the video based on the repair option
     const fetchVideo = async () => {
       try {
+        // hiding the api in env file
         const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
 
         // Modify the query based on the selected repairOption and vehicleData.make
         const query = `${repairOption} repair tutorial for ${vehicleData.make}`;
 
-        // Make a request to the YouTube Data API
+        // Make a GET request to the YouTube Data API
         const response = await axios.get(
           "https://www.googleapis.com/youtube/v3/search",
           {
@@ -47,6 +48,7 @@ const RepairVideo = ({ repairOption, vehicleData }) => {
       {videoId && (
         <div>
           <h3>
+            {/* if oil return An, or else return A */}
             {repairOption === "Oil"
               ? `An ${repairOption} Repair Tutorial for your ${vehicleData.make}! `
               : `A ${repairOption} Repair Tutorial for your ${vehicleData.make}!`}

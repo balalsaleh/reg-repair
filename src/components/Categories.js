@@ -18,6 +18,7 @@ const Categories = ({ onCategorySelect }) => {
           <img src={brakesIcon} alt="Brakes Icon" />
           Brakes
         </button>
+
         <button
           className="RepairOption"
           onClick={() => onCategorySelect("Wipers")} // Pass the category name "Wipers"
@@ -49,9 +50,6 @@ const Categories = ({ onCategorySelect }) => {
           <img src={oilIcon} alt="Oil Icon" />
           Oil
         </button>
-
-
-        {/* Add buttons for other repair options */}
       </div>
     </Card>
   );
