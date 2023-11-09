@@ -6,6 +6,19 @@ Welcome to Reg-Repair, your go-to platform for hassle-free car maintenance and r
 
 Reg-Repair is an automotive assistance web application designed to provide a seamless experience for all of your car maintenance needs. By simply entering your vehicle's registration plate, you can access tailor-made video tutorials for specific car parts, ensuring you get accurate and relevant repair guidance.
 
+# Table of Contents
+
+1. [Reg-Repair Web Application](#reg-repair-web-application)
+   1. [Overview](#overview)
+   2. [Features](#features)
+   3. [How to use this application?](#how-to-use-this-application)
+   4. [Getting Started](#getting-started)
+2. [Technology Used](#technology-used)
+3. [Deployment](#deployment)
+4. [Future Additions](#future-additions)
+5. [Images of Application](#images-of-application)
+6. [Links of Deployment](#links-of-deployment)
+
 ## Features
 
 - **Intuitive Interface:**
@@ -46,13 +59,41 @@ To run the Reg-Repair web application locally, follow these steps:
 3. Navigate to the project directory and run the following command to install the required npm packages:
 
    ```bash
-   npm install antd@^5.11.0 axios@^1.6.1 react@^18.2.0 react-dom@^18.2.0 react-scripts@5.0.1 react-youtube@^10.1.0 web-vitals@^2.1.4
+   npm install antd@^5.11.0 axios@^1.6.1 react@^18.2.0 react-dom@^18.2.0 react-scripts@5.0.1 react-youtube@^10.1.0
    ```
 
 4. Run the Application
    ```bash
    npm start
    ```
+
+# Technology Used
+
+We used the following NPM packages to build:
+
+##### antd@^5.11.0:
+
+Ant Design is a popular React UI library. It provides a set of high-quality components for building the user interface of your application.
+
+##### axios@^1.6.1
+
+Axios is a promise-based HTTP client for the browser and Node.js. It simplifies making HTTP requests and handling responses in your application.
+
+##### react@^18.2.0:
+
+React is a JavaScript library for building user interfaces. It allows you to create reusable UI components and manage the state of your application efficiently.
+
+##### react-dom@^18.2.0:
+
+ReactDOM is the package responsible for rendering React components into the DOM (Document Object Model).
+
+##### react-scripts@5.0.1:
+
+React Scripts is a set of scripts and configuration used by Create React App to build and run React applications. Version 5.0.1 includes various tools and configurations for development and production builds.
+
+##### react-youtube@^10.1.0:
+
+React YouTube is a React component for embedding YouTube videos. It simplifies the integration of YouTube videos into your React application.
 
 # Deploymenmt
 
@@ -61,3 +102,33 @@ Sadly due to issues with CORS our deployment of the application was unsuccessful
 We tried to use both Netlify and Vercel. These were both unsuccessful.
 
 # Future additions
+
+- Using a better API get more data
+- Storing registrations
+- Fixing the CORS issues we encountered
+
+# Images of Application
+
+So you land onto this landing page, here you can insert your car registration plate.
+
+![landing-page](./src/components/images/reg-repair-landing.png)
+
+Once you insert your registration plate
+
+![entered-reg](./src/components/images/entered-reg.png)
+
+You get your vehicle make and you are given Options for your cars MAKE
+
+![options-reg](./src/components/images/options.png)
+
+You are given a video for your vehicles make based on the option you chose
+
+![insert-reg](./src/components/images/youtube.png)
+
+# Links of deployment:
+
+Netlify: https://reg-repair.netlify.app/
+
+Vercel: https://reg-repair.vercel.app/
+
+Github Repo: https://github.com/balalsaleh/reg-repair
