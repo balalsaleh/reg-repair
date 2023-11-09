@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# Reg-Repair Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Reg-Repair, your go-to platform for hassle-free car maintenance and repair tutorials.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Reg-Repair is an automotive assistance web application designed to provide a seamless experience for all of your car maintenance needs. By simply entering your vehicle's registration plate, you can access tailor-made video tutorials for specific car parts, ensuring you get accurate and relevant repair guidance.
 
-### `npm start`
+# Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Reg-Repair Web Application](#reg-repair-web-application)
+   1. [Overview](#overview)
+   2. [Features](#features)
+   3. [How to use this application?](#how-to-use-this-application)
+   4. [Getting Started](#getting-started)
+2. [Technology Used](#technology-used)
+3. [Deployment](#deployment)
+4. [Future Additions](#future-additions)
+5. [Images of Application](#images-of-application)
+6. [Links of Deployment](#links-of-deployment)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Intuitive Interface:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Our platform is designed with your convenience in mind, offering a user-friendly and intuitive interface which uses Ant.Design!
 
-### `npm run build`
+- **Personalized Tutorials:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We use the DVLA API to post a registration number as a paramater which the user puts in and searches via the user interface to return the vehicles make. we then use this as a search query a long with a car part to get tailor-made video tutorials based on your vehicle's make and the specific part you want to repair (brakes, wipers, battery, bulb, or oil).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Eliminate Guesswork:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With this Application we can say goodbye to generic and confusing tutorials. Reg-Repair ensures you receive precise, relevant, and high-quality video content.
 
-### `npm run eject`
+## How to use this application?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Enter your vehicle's registration plate.
+2. Click on the specific part you want to repair (brakes, wipers, battery, bulb, or oil).
+3. Enjoy a personalized video tutorial for your car's make.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run the Reg-Repair web application locally, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/balalsaleh/reg-repair
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install Dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   cd reg-repair
+   npm install
+   ```
 
-### Code Splitting
+3. Navigate to the project directory and run the following command to install the required npm packages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install antd@^5.11.0 axios@^1.6.1 react@^18.2.0 react-dom@^18.2.0 react-scripts@5.0.1 react-youtube@^10.1.0
+   ```
 
-### Analyzing the Bundle Size
+4. Run the Application
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Technology Used
 
-### Making a Progressive Web App
+We used the following NPM packages to build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##### antd@^5.11.0:
 
-### Advanced Configuration
+Ant Design is a popular React UI library. It provides a set of high-quality components for building the user interface of your application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+##### axios@^1.6.1
 
-### Deployment
+Axios is a promise-based HTTP client for the browser and Node.js. It simplifies making HTTP requests and handling responses in your application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+##### react@^18.2.0:
 
-### `npm run build` fails to minify
+React is a JavaScript library for building user interfaces. It allows you to create reusable UI components and manage the state of your application efficiently.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### react-dom@^18.2.0:
+
+ReactDOM is the package responsible for rendering React components into the DOM (Document Object Model).
+
+##### react-scripts@5.0.1:
+
+React Scripts is a set of scripts and configuration used by Create React App to build and run React applications. Version 5.0.1 includes various tools and configurations for development and production builds.
+
+##### react-youtube@^10.1.0:
+
+React YouTube is a React component for embedding YouTube videos. It simplifies the integration of YouTube videos into your React application.
+
+# Deploymenmt
+
+Sadly due to issues with CORS our deployment of the application was unsuccessful, no doubt this is something which can be fixed for the near future. However this deployment would require time, and we were on a time deadline to finish this project.
+
+We tried to use both Netlify and Vercel. These were both unsuccessful.
+
+# Future additions
+
+- Using a better API get more data
+- Storing registrations
+- Fixing the CORS issues we encountered
+
+# Images of Application
+
+So you land onto this landing page, here you can insert your car registration plate.
+
+![landing-page](./src/components/images/reg-repair-landing.png)
+
+Once you insert your registration plate
+
+![entered-reg](./src/components/images/entered-reg.png)
+
+You get your vehicle make and you are given Options for your cars MAKE
+
+![options-reg](./src/components/images/options.png)
+
+You are given a video for your vehicles make based on the option you chose
+
+![insert-reg](./src/components/images/youtube.png)
+
+# Links of deployment:
+
+Netlify: https://reg-repair.netlify.app/
+
+Vercel: https://reg-repair.vercel.app/
+
+Github Repo: https://github.com/balalsaleh/reg-repair
