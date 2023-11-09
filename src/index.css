@@ -7,27 +7,22 @@ body {
 
 code {
   font-family: 'Poppins', sans-serif;
-
 }
 
 /* --------  HEADER & NAV BAR ------- */
-
 .ant-menu-horizontal .ant-menu-item {
   height: 80px; /* Change the value as needed */
-
 }
 
 .ant-menu-horizontal .ant-menu-item {
   font-size: 20px; /* Change the font size as needed */
   padding: 16px 24px; /* Adjust the padding as needed */
-
 }
 
 .ant-menu-horizontal {
   display: flex;
   justify-content: center;
 }
-
 
 .ant-menu-horizontal .ant-menu-item {
   margin: 0 10px; /* You can adjust the margin as needed */
@@ -49,7 +44,6 @@ code {
 }
 
 /* ------- BANNER ------- */
-
 .banner {
   display: flex;
   justify-content: center;
@@ -105,14 +99,12 @@ code {
 }
 
 /* Adjust the button's width as needed */
-
 .searchButton-container .ant-btn {
   width: 100px; /* Adjust the width as needed */
   margin-bottom: 15px; /* Add space at the bottom of the button */
 }
 
  /* ----- Categories ------ */
-
 .grid-container {
   display: flex;
   flex-direction: column;
@@ -134,18 +126,15 @@ code {
 
   /* Define the default background color */
   background-color: #ffffff;
-
   cursor: pointer;
 }
 
 .RepairOption:hover {
   background-color: #f0f0f0; /* Change to a different color or style as desired */
-
   cursor: pointer;
 }
 
  /* ----- Video Frame ------ */
-
 .repair-video-container {
   display: flex;
   justify-content: center;
@@ -155,17 +144,49 @@ code {
   margin-top: 30px;
 }
 
+/* about us page*/
+.custom-header h1 {
+  text-align: center;
+  font-size: 50px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Add space below the title */
+}
 
+/* Style the content container for the "About Us" page */
+.content-container.About {
+  font-size: 18px; /* Adjust the font size as needed */
+  font-family: 'Poppins', sans-serif; /* Use the same font as your Reg-Repair page */
+}
 
+/* Adjust the font size and line height of the Descriptions content */
+.Descriptions {
+  font-size: 18px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Adjust the line height as needed */
+}
 
+/* Style the label in Descriptions */
+.Descriptions-label {
+  font-weight: bold; /* Make the label bold */
+  font-size: 35px; /* Adjust the font size as needed */
+}
 
+/* Style the content in Descriptions */
+.Descriptions-content {
+  color: #333; /* Text color for the content */
+}
 
+.about-us-text {
+  font-size: 25px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Adjust the line height as needed */
+  padding: 50px; /* Adjust the padding as needed */
+}
 
-
+.contact-us-text {
+  font-size: 25px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Adjust the line height as needed */
+  padding: 50px; /* Adjust the padding as needed */
+}
 
 /* ------- MEDIA QUERIES ------- */
-
-
 /* Define breakpoints for mobile responsiveness */
 @media screen and (max-width: 768px) {
   /* Adjust the font size for smaller screens */
@@ -209,4 +230,40 @@ code {
   }
 }
 
-/* Additional mobile-responsive styles can be added here */
+@media screen and (max-width: 768px) {
+  .grid-row {
+    flex-direction: column; /* Change to column layout on smaller screens */
+  }
+
+  .RepairOption {
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Add margin between buttons */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .repair-video-container {
+    margin-bottom: 5px; /* Adjust margin for smaller screens */
+    margin-top: 5px; /* Adjust margin for smaller screens */
+    max-width: 100%; /* Make the container width 100% of the parent element */
+    overflow: hidden; /* Hide overflowing content for smaller screens */
+  }
+
+  .repair-video-container iframe {
+    width: 100%; /* Make the iframe width 100% of the container */
+    height: auto; /* Allow the height to adjust proportionally */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-text {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .contact-us-text {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+}
