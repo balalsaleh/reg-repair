@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Reg-Repair Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Reg-Repair, your go-to platform for hassle-free car maintenance and repair tutorials.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Reg-Repair is an automotive assistance web application designed to provide a seamless experience for all of your car maintenance needs. By simply entering your vehicle's registration plate, you can access tailor-made video tutorials for specific car parts, ensuring you get accurate and relevant repair guidance.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Intuitive Interface:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Our platform is designed with your convenience in mind, offering a user-friendly and intuitive interface which uses Ant.Design!
 
-### `npm test`
+- **Personalized Tutorials:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We use the DVLA API to post a registration number as a paramater which the user puts in and searches via the user interface to return the vehicles make. we then use this as a search query a long with a car part to get tailor-made video tutorials based on your vehicle's make and the specific part you want to repair (brakes, wipers, battery, bulb, or oil).
 
-### `npm run build`
+- **Eliminate Guesswork:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+With this Application we can say goodbye to generic and confusing tutorials. Reg-Repair ensures you receive precise, relevant, and high-quality video content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to use this application?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Enter your vehicle's registration plate.
+2. Click on the specific part you want to repair (brakes, wipers, battery, bulb, or oil).
+3. Enjoy a personalized video tutorial for your car's make.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run the Reg-Repair web application locally, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/balalsaleh/reg-repair
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install Dependencies:
 
-## Learn More
+   ```bash
+   cd reg-repair
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Navigate to the project directory and run the following command to install the required npm packages:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install antd@^5.11.0 axios@^1.6.1 react@^18.2.0 react-dom@^18.2.0 react-scripts@5.0.1 react-youtube@^10.1.0 web-vitals@^2.1.4
+   ```
 
-### Code Splitting
+4. Run the Application
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Deploymenmt
 
-### Analyzing the Bundle Size
+Sadly due to issues with CORS our deployment of the application was unsuccessful, no doubt this is something which can be fixed for the near future. However this deployment would require time, and we were on a time deadline to finish this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We tried to use both Netlify and Vercel. These were both unsuccessful.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Future additions
