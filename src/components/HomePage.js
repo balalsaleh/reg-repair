@@ -10,7 +10,10 @@ import regRepairImage from "./images/icons8-repair-64.png";
 import Categories from "./Categories";
 import RepairVideo from "./YTvideo";
 import { fetchVehicleInfo } from "./DvlaApi";
+import AboutUsPage from "./AboutUsPage";
+import ContactUsPage from "./ContactUsPage";
 
+// Navigation menu items
 const items = [
   {
     label: "Reg-Repair",
@@ -30,21 +33,23 @@ const items = [
 ];
 
 function HomePage() {
+  // State variables
   const [selectedOption, setSelectedOption] = useState(null);
-  const [current, setCurrent] = useState("mail");
+  const [current, setCurrent] = useState("regRepair");
   const [registrationNumber, setRegistrationNumber] = useState("");
   const [vehicleData, setVehicleData] = useState(null);
-  const [showCategories, setShowCategories] = useState(false);
 
+  // Handle menu item click
   const onClick = (e) => {
     setCurrent(e.key);
+    setVehicleData(null);
   };
 
+  // Fetch vehicle data from API
   const fetchVehicleData = async () => {
     try {
       const data = await fetchVehicleInfo(registrationNumber);
       setVehicleData(data);
-      setShowCategories(true);
     } catch (error) {
       console.error("Error fetching vehicle data: ", error);
     }
@@ -52,6 +57,7 @@ function HomePage() {
 
   return (
     <div>
+      {/* Header */}
       <div className="inner-header">
         <img
           src={regRepairImage}
@@ -69,53 +75,71 @@ function HomePage() {
         ))}
       </Menu>
 
-      <div className="banner">
-        <div className="banner-content">
-          <h1>Enter your Reg, find your Repair!</h1>
-          <input
-            type="text"
-            className="regInput"
-            placeholder="ENTER REG"
-            value={registrationNumber}
-            onChange={(e) => setRegistrationNumber(e.target.value)}
-          />
-        </div>
-        <div className="background-half"></div>
-      </div>
+      {/* Main content based on selected menu item */}
+      {current === "regRepair" && (
+        <div>
+          {/* Reg-Repair Banner */}
+          <div className="banner">
+            <div className="banner-content">
+              <h1>Enter your Reg, find your Repair!</h1>
+              <input
+                type="text"
+                className="regInput"
+                placeholder="ENTER REG"
+                value={registrationNumber}
+                onChange={(e) => setRegistrationNumber(e.target.value)}
+              />
+            </div>
+            <div className="background-half"></div>
+          </div>
 
-      <div className="searchButton-container">
-        {/* Button to trigger fetching vehicle information */}
-        <Button
-          type="primary"
-          icon={<SearchOutlined />}
-          onClick={fetchVehicleData}
-        >
-          Search
-        </Button>
-      </div>
+          {/* Search button */}
+          <div className="searchButton-container">
+            <Button
+              type="primary"
+              icon={<SearchOutlined />}
+              onClick={fetchVehicleData}
+            >
+              Search
+            </Button>
+          </div>
 
-      {/* Display car information */}
-      {vehicleData && (
-        <div className="vehicle-container">
-          <h2>You drive a {vehicleData.make}.</h2>
-          <p>Pick your repair from the options below:</p>
+          {/* Display car information and related components */}
+          {vehicleData && (
+            <div className="vehicle-container">
+              <h2>You drive a {vehicleData.make}.</h2>
+              <p>Pick your repair from the options below:</p>
+
+              {/* Categories container */}
+              <div className="categories-container">
+                <Categories onCategorySelect={setSelectedOption} />
+              </div>
+
+              {/* Repair video container */}
+              {selectedOption && (
+                <div className="repair-video-container">
+                  <RepairVideo
+                    repairOption={selectedOption}
+                    vehicleData={vehicleData}
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
 
-      {/* Render Categories component when showCategories is true */}
-      {showCategories && (
-        <div className="categories-container">
-          <Categories onCategorySelect={setSelectedOption} />
+      {/* Display About Us page */}
+      {current === "aboutUs" && (
+        <div>
+          <AboutUsPage />
         </div>
       )}
 
-      {/* Display the video */}
-      {selectedOption && (
-        <div className="repair-video-container">
-          <RepairVideo
-            repairOption={selectedOption}
-            vehicleData={vehicleData}
-          />
+      {/* Display Contact Us page */}
+      {current === "contactUs" && (
+        <div>
+          <ContactUsPage />
         </div>
       )}
     </div>
