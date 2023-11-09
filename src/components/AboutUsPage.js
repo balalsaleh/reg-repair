@@ -8,7 +8,7 @@ const AboutUsPage = () => {
       <h1>About Us</h1>
       <div className="content-container About">
         <Descriptions layout="vertical" bordered>
-          <Descriptions.Item label="About Us">
+          <Descriptions.Item label="Our Story" className="our-story-item">
             <p className="about-us-text">
               Welcome to our revolutionary automotive assistance web
               application! Our platform is designed with your convenience in

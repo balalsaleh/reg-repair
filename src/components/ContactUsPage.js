@@ -12,7 +12,7 @@ const ContactUsPage = () => {
             <p className="contact-us-text">
               If you have any questions you can contact us on GitHub:
             </p>
-            <ul>
+            <ul className="contact-us-text">
               <li>
                 <strong>Balal Saleh</strong>
                 <br />
