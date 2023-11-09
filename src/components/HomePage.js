@@ -151,6 +151,7 @@ function HomePage() {
         </Button>
       </div>
 
+      {/* This is where we display the car information */}
       {vehicleData && (
         <div className="vehicle-container">
           <h2>You drive a {vehicleData.make}.</h2>
@@ -165,6 +166,7 @@ function HomePage() {
         </div>
       )}
 
+      {/* This is where we display the video */}
       {selectedOption && (
         <div className="repair-video-container">
           <RepairVideo
