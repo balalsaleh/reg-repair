@@ -103,9 +103,21 @@ We tried to use both Netlify and Vercel. These were both unsuccessful.
 
 # Future additions
 
+Simple additions:
+
 - Using a better API get more data
 - Storing registrations
 - Fixing the CORS issues we encountered
+
+Complex additions:
+
+- Multimedia Content: Enhance user engagement by providing a variety of multimedia content, including video tutorials, interactive 3D models, and augmented reality (AR) guides.
+
+- User Accounts and Profiles: Implement user accounts to allow users to save their vehicle information and preferences, track their repair history, and receive personalised recommendations.
+
+- Community Features: Create a community aspect where users can share their repair experiences, tips, and tricks, fostering a supportive DIY car care community.
+
+- Integration with E-commerce: Enable users to order replacement parts directly through your platform, providing a one-stop solution for repair needs. Or forwarding to industry partners with affiliate marketing.
 
 # Images of Application
 
@@ -113,13 +125,9 @@ So you land onto this landing page, here you can insert your car registration pl
 
 ![landing-page](./src/components/images/reg-repair-landing.png)
 
-Once you insert your registration plate
+Once you insert your registration plate. You get your vehicle make and you are given Options for your cars MAKE
 
 ![entered-reg](./src/components/images/entered-reg.png)
-
-You get your vehicle make and you are given Options for your cars MAKE
-
-![options-reg](./src/components/images/options.png)
 
 You are given a video for your vehicles make based on the option you chose
 
