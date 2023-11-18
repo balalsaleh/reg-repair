@@ -81,7 +81,7 @@ function HomePage() {
           {/* Reg-Repair Banner */}
           <div className="banner">
             <div className="banner-content">
-              <h1>Enter your Reg, find your Repair!</h1>
+              <h1>Enter your Reg, and find your Repair!</h1>
               <input
                 type="text"
                 className="regInput"
@@ -107,8 +107,11 @@ function HomePage() {
           {/* Display car information and related components */}
           {vehicleData && (
             <div className="vehicle-container">
-              <h2>You drive a {vehicleData.make}.</h2>
-              <p>Pick your repair from the options below:</p>
+              <h2>
+                You drive a {vehicleData.colour} {vehicleData.make}, this
+                vehicle was manufactured in {vehicleData.yearOfManufacture}.
+              </h2>
+              <p>Pick a repair from the options below:</p>
 
               {/* Categories container */}
               <div className="categories-container">
