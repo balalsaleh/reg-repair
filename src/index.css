@@ -123,14 +123,12 @@ code {
   margin: 30px; /* Adjust the margin as needed for spacing between items */
   border-radius: 10px; /* Adjust the radius value as needed for the amount of curvature */
   transition: background-color 0.3s; /* Add a smooth transition effect */
-
-  /* Define the default background color */
-  background-color: #ffffff;
+  background-color: #ffffff; /* background colour */
   cursor: pointer;
 }
 
 .RepairOption:hover {
-  background-color: #f0f0f0; /* Change to a different color or style as desired */
+  background-color: #479cfc; /* Change to a different color or style as desired */
   cursor: pointer;
 }
 
