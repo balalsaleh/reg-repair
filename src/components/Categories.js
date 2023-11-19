@@ -1,11 +1,11 @@
 import React from "react";
 import { Card } from "antd";
 import "../index.css";
-import brakesIcon from "./images/brake-icon.svg";
-import wiperIcon from "./images/wiper-icon.svg";
-import batteryIcon from "./images/battery-icon.svg";
-import bulbIcon from "./images/lamp-icon.svg";
-import oilIcon from "./images/oil-icon.svg";
+import brakesIcon from "./images/icons/brake-icon.svg";
+import wiperIcon from "./images/icons/wiper-icon.svg";
+import batteryIcon from "./images/icons/battery-icon.svg";
+import bulbIcon from "./images/icons/lamp-icon.svg";
+import oilIcon from "./images/icons/oil-icon.svg";
 
 const Categories = ({ onCategorySelect }) => {
   return (

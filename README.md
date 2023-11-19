@@ -111,19 +111,19 @@ We tried to use both Netlify and Vercel. These were both unsuccessful.
 
 So you land onto this landing page, here you can insert your car registration plate.
 
-![landing-page](./src/components/images/reg-repair-landing.png)
+![landing-page](./src/components/images/readmePics/reg-repair-landing.png)
 
 Once you insert your registration plate
 
-![entered-reg](./src/components/images/entered-reg.png)
+![entered-reg](./src/components/images/readmePics/entered-reg.png)
 
 You get your vehicle make and you are given Options for your cars MAKE
 
-![options-reg](./src/components/images/options.png)
+![options-reg](./src/components/images/readmePics/options.png)
 
 You are given a video for your vehicles make based on the option you chose
 
-![insert-reg](./src/components/images/youtube.png)
+![insert-reg](./src/components/images/readmePics/youtube.png)
 
 # Links of deployment:
 

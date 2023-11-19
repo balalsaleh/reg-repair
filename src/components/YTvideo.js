@@ -13,7 +13,7 @@ const RepairVideo = ({ repairOption, vehicleData }) => {
         const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
 
         // Modify the query based on the selected repairOption and vehicleData.make
-        const query = `${repairOption} repair tutorial for ${vehicleData.make}`;
+        const query = `${repairOption} repair tutorial for ${vehicleData.make} ${vehicleData.yearOfManufacture}`;
 
         // Make a GET request to the YouTube Data API
         const response = await axios.get(
