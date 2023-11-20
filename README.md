@@ -1,3 +1,5 @@
+![logo](./src/components/images/icons8-repair-64.png) 
+
 # Reg-Repair Web Application
 
 Welcome to Reg-Repair, your go-to platform for hassle-free car maintenance and repair tutorials.
